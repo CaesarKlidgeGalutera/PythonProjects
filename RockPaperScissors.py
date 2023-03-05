@@ -1,27 +1,30 @@
 import random
-#this is a simple rock paper scissors program
+
+# this is a simple rock paper scissors program
 choices = ["rock", "paper", "scissors"]
 computer = random.choice(choices)
 player = input("Enter your choice (rock, paper, scissors): ")
-result = { "player" : player, "computer" : computer}
+result = {"player": player, "computer": computer}
 
-def match(player, computer):
-    result=""
+
+def match(player_choice, computer_choice):
+    output = ""
     if player == computer:
-        result = "It's a tie!"
+        output = "It's a tie!"
     elif player == "rock" and computer == "scissors":
-        result = "You win!"
+        output = "You win!"
     elif player == "rock" and computer == "paper":
-        result = "You lose!"
+        output = "You lose!"
     elif player == "paper" and computer == "scissors":
-        result = "You lose!"
+        output = "You lose!"
     elif player == "paper" and computer == "rock":
-        result = "You win!"
-    elif player == "sciccors" and computer == "rock":
-        result = "You lose!"
+        output = "You win!"
+    elif player == "scissors" and computer == "rock":
+        output = "You lose!"
     elif player == "scissors" and computer == "paper":
-        result = "You win!"
-    return result
+        output = "You win!"
+    return output
+
 
 print(result)
 print(match(player, computer))
